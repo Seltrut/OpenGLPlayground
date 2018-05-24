@@ -16,7 +16,7 @@ class MyGLRenderer implements GLSurfaceView.Renderer{
         GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
         mTriangle = new Triangle();
-        loadShader(GLES20.)
+
     }
 
     @Override
@@ -30,6 +30,7 @@ class MyGLRenderer implements GLSurfaceView.Renderer{
     @Override
     public void onDrawFrame(GL10 gl10) {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+        mTriangle.draw();
     }
 
     public static int loadShader( int type, String shaderCode ){
